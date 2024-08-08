@@ -1,0 +1,7 @@
+[gd_resource type="BoxMesh" load_steps=2 format=3 uid="uid://d2rw8dg28iago"]
+
+[ext_resource type="Material" uid="uid://dximpq6j6v8ja" path="res://assets/Sprites/road.tres" id="1_pycbu"]
+
+[resource]
+lightmap_size_hint = Vector2i(14, 21)
+material = ExtResource("1_pycbu")

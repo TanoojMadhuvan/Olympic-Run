@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://crrm7rcv3vtdv"]
+
+[ext_resource type="Texture2D" uid="uid://b2re21axb16yx" path="res://assets/Imports/Lava_Texture/Stylized_Lava_001_basecolor.png" id="1_e3avv"]
+[ext_resource type="Texture2D" uid="uid://b3weehilgqm4o" path="res://assets/Imports/Lava_Texture/Stylized_Lava_001_emissive.png" id="2_nuvwa"]
+[ext_resource type="Texture2D" uid="uid://cm20xymrh30s4" path="res://assets/Imports/Lava_Texture/Stylized_Lava_001_height.png" id="3_s3swl"]
+[ext_resource type="Texture2D" uid="uid://d4bmnyj6sfsbr" path="res://assets/Imports/Lava_Texture/Stylized_Lava_001_normal.png" id="4_bc55p"]
+[ext_resource type="Texture2D" uid="uid://cxodn1b6nysqu" path="res://assets/Imports/Lava_Texture/Stylized_Lava_001_roughness.png" id="5_uvok0"]
+
+[resource]
+albedo_texture = ExtResource("1_e3avv")
+roughness_texture = ExtResource("5_uvok0")
+emission_enabled = true
+emission_energy_multiplier = 5.11
+emission_texture = ExtResource("2_nuvwa")
+normal_enabled = true
+normal_scale = 4.92
+normal_texture = ExtResource("4_bc55p")
+heightmap_enabled = true
+heightmap_scale = 8.368
+heightmap_texture = ExtResource("3_s3swl")

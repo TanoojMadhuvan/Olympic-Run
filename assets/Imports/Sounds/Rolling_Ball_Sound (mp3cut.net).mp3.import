@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwprib8b8oor"
+path="res://.godot/imported/Rolling_Ball_Sound (mp3cut.net).mp3-a117f6640fccfd809a2ec3b246754652.mp3str"
+
+[deps]
+
+source_file="res://assets/Imports/Sounds/Rolling_Ball_Sound (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Rolling_Ball_Sound (mp3cut.net).mp3-a117f6640fccfd809a2ec3b246754652.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

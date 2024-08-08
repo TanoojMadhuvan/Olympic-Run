@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://dvr2gjikxdlwr"]
+
+[ext_resource type="Texture2D" uid="uid://4jys41xr6mf3" path="res://assets/Imports/Marble_Texture/Kintsugi_001_basecolor.png" id="1_ix2hb"]
+[ext_resource type="Texture2D" uid="uid://ca1egym2ahbmw" path="res://assets/Imports/Marble_Texture/Kintsugi_001_ambientOcclusion.png" id="2_etmsb"]
+[ext_resource type="Texture2D" uid="uid://mdm3s7agmvfy" path="res://assets/Imports/Marble_Texture/Kintsugi_001_height.png" id="3_h23qj"]
+[ext_resource type="Texture2D" uid="uid://ohoms8ik8ryf" path="res://assets/Imports/Marble_Texture/Kintsugi_001_metallic.png" id="4_1vgfa"]
+[ext_resource type="Texture2D" uid="uid://bbm44t57rok00" path="res://assets/Imports/Marble_Texture/Kintsugi_001_normal.png" id="5_jxqpa"]
+[ext_resource type="Texture2D" uid="uid://6tv7vgvmkjaq" path="res://assets/Imports/Marble_Texture/Kintsugi_001_roughness.png" id="6_ohcdm"]
+
+[resource]
+albedo_texture = ExtResource("1_ix2hb")
+metallic = 1.0
+metallic_texture = ExtResource("4_1vgfa")
+roughness_texture = ExtResource("6_ohcdm")
+normal_enabled = true
+normal_texture = ExtResource("5_jxqpa")
+ao_enabled = true
+ao_texture = ExtResource("2_etmsb")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_h23qj")

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dximpq6j6v8ja"]
+
+[ext_resource type="Texture2D" uid="uid://k1qno0fyulc5" path="res://assets/Imports/Road_Texture/textures/asphalt_02_nor_gl_2k.png" id="1_8lf0u"]
+[ext_resource type="Texture2D" uid="uid://ddpjp65foidex" path="res://assets/Imports/Road_Texture/textures/asphalt_02_rough_2k.jpg" id="2_e3vou"]
+
+[resource]
+albedo_color = Color(0.0836315, 0.0271164, 0.00527565, 1)
+roughness_texture = ExtResource("2_e3vou")
+normal_enabled = true
+normal_scale = 14.16
+normal_texture = ExtResource("1_8lf0u")
+uv1_triplanar = true

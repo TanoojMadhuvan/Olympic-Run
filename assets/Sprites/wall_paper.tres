@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://cyf66cahi2ddw"]
+
+[ext_resource type="Texture2D" uid="uid://dq1wnm18ihjr5" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_basecolor.jpg" id="1_dk7e5"]
+[ext_resource type="Texture2D" uid="uid://dedc3nmvkaco3" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_ambientOcclusion.jpg" id="2_yukrn"]
+[ext_resource type="Texture2D" uid="uid://bdldt5rlu7cci" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_height.jpg" id="3_7pkhp"]
+[ext_resource type="Texture2D" uid="uid://bp3ik3pv1nf31" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_metallic.jpg" id="4_4o06n"]
+[ext_resource type="Texture2D" uid="uid://d18mat4vr23te" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_normal.jpg" id="5_dgbiu"]
+[ext_resource type="Texture2D" uid="uid://dghpxw6vnn3tm" path="res://assets/Imports/Purple_Wallpaper_Texture/Wallpaper_ArtDeco_002_roughness.jpg" id="6_5tn46"]
+
+[resource]
+albedo_texture = ExtResource("1_dk7e5")
+metallic = 1.0
+metallic_texture = ExtResource("4_4o06n")
+roughness_texture = ExtResource("6_5tn46")
+normal_enabled = true
+normal_texture = ExtResource("5_dgbiu")
+ao_enabled = true
+ao_texture = ExtResource("2_yukrn")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_7pkhp")
