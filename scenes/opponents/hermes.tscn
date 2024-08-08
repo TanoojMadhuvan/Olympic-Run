@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://be7synmkixh5l"]
+
+[ext_resource type="Script" path="res://scripts/hermes.gd" id="1_2ag0u"]
+[ext_resource type="Texture2D" uid="uid://whjn0redpdy3" path="res://assets/Imports/Greek_Textures/Hermes_Texture.jpg" id="1_ec3ao"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qum0o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rjqi"]
+albedo_texture = ExtResource("1_ec3ao")
+metallic = 0.25
+emission = Color(0.678926, 0.315012, 0.107348, 1)
+emission_energy_multiplier = 3.16
+
+[sub_resource type="SphereMesh" id="SphereMesh_7xe7m"]
+material = SubResource("StandardMaterial3D_5rjqi")
+
+[node name="Hermes" type="CharacterBody3D"]
+script = ExtResource("1_2ag0u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_qum0o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7xe7m")

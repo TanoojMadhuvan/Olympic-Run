@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjq85sigh2ix7"]
+
+[ext_resource type="PackedScene" uid="uid://r1lwyd1l88uv" path="res://assets/Imports/playerball.glb" id="1_udt3u"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50832, -0.470644, -0.840982)
+
+[node name="playerball" parent="." instance=ExtResource("1_udt3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48065, 0.550484, 0.832453)

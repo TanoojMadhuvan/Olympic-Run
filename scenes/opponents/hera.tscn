@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://jbd2a8eaayxe"]
+
+[ext_resource type="Script" path="res://scripts/hera.gd" id="1_3p6gy"]
+[ext_resource type="Texture2D" uid="uid://o710815notkh" path="res://assets/Imports/Greek_Textures/Hera_Texture.jpg" id="2_qknrw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l1jpg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ddd6u"]
+albedo_texture = ExtResource("2_qknrw")
+
+[sub_resource type="SphereMesh" id="SphereMesh_4f5j0"]
+material = SubResource("StandardMaterial3D_ddd6u")
+
+[node name="Hera" type="CharacterBody3D"]
+script = ExtResource("1_3p6gy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_l1jpg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_4f5j0")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://drrlk6vcwb18e"]
+
+[ext_resource type="Script" path="res://scripts/athena.gd" id="1_b1ew3"]
+[ext_resource type="Texture2D" uid="uid://dx5vhovld2t14" path="res://assets/Imports/Greek_Textures/Owl_Athena_Texture.jpg" id="2_4gxx4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rvtmx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4nco"]
+albedo_texture = ExtResource("2_4gxx4")
+
+[sub_resource type="SphereMesh" id="SphereMesh_dlpju"]
+material = SubResource("StandardMaterial3D_l4nco")
+
+[node name="Athena" type="CharacterBody3D"]
+script = ExtResource("1_b1ew3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_rvtmx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_dlpju")

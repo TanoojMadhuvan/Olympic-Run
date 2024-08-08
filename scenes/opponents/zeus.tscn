@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://w45lac1xk1ie"]
+
+[ext_resource type="Script" path="res://scripts/zeus.gd" id="1_beykd"]
+[ext_resource type="Texture2D" uid="uid://yvsdmbj346rs" path="res://assets/Imports/Greek_Textures/Fixed_Zeus_Texture.jpeg" id="1_latlj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hr26g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo67y"]
+albedo_texture = ExtResource("1_latlj")
+
+[sub_resource type="SphereMesh" id="SphereMesh_y7ltp"]
+material = SubResource("StandardMaterial3D_wo67y")
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_beykd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hr26g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_y7ltp")

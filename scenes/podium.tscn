@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://doci4avjxk7n5"]
+
+[ext_resource type="Script" path="res://scripts/podium.gd" id="1_m1f1t"]
+[ext_resource type="FontFile" uid="uid://ckwspe7kovr6e" path="res://assets/Imports/BlinkObl.otf" id="1_oyky3"]
+[ext_resource type="Texture2D" uid="uid://d13qagg1ny60m" path="res://assets/Imports/Podium_Background.jpg" id="1_ypm8w"]
+[ext_resource type="FontFile" uid="uid://b8fb0mgacngnf" path="res://assets/Imports/intuitive.ttf" id="3_0wk88"]
+[ext_resource type="Script" path="res://scripts/Back_Podium_Button.gd" id="3_a7cl6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1f1t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -93.0
+offset_top = -64.0
+offset_right = 1197.0
+offset_bottom = 832.0
+texture = ExtResource("1_ypm8w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -13.0
+offset_right = 1198.0
+offset_bottom = 720.0
+color = Color(0.952941, 0.952941, 1, 0.854902)
+
+[node name="Back_Podium_Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 186.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("1_oyky3")
+theme_override_font_sizes/font_size = 75
+text = "BACK"
+script = ExtResource("3_a7cl6")
+
+[node name="Podium_Finish_Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 37.0
+offset_right = 1153.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
+theme_override_fonts/font = ExtResource("3_0wk88")
+theme_override_font_sizes/font_size = 100
+text = "You finished #"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Podium_Text" type="Label" parent="."]
+layout_mode = 0
+offset_top = 362.0
+offset_right = 1153.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0.556869, 0.320653, 0, 1)
+theme_override_fonts/font = ExtResource("3_0wk88")
+theme_override_font_sizes/font_size = 70
+text = "Preceded by: 
+Followed by: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Back_Podium_Button" to="Back_Podium_Button" method="_on_pressed"]

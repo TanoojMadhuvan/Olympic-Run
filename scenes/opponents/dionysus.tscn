@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0qb2vy067yw4"]
+
+[ext_resource type="Script" path="res://scripts/dionysus.gd" id="1_ll62c"]
+[ext_resource type="Texture2D" uid="uid://wrxr4rb3n1cg" path="res://assets/Imports/Greek_Textures/Dionysus_Texture.jpg" id="2_hi842"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f8nan"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woysg"]
+albedo_texture = ExtResource("2_hi842")
+
+[sub_resource type="SphereMesh" id="SphereMesh_o0nr7"]
+material = SubResource("StandardMaterial3D_woysg")
+
+[node name="dionysus" type="CharacterBody3D"]
+script = ExtResource("1_ll62c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_f8nan")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_o0nr7")

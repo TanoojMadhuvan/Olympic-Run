@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmqu0qelie3hn"]
+
+[ext_resource type="Script" path="res://scripts/gold_speed.gd" id="1_p36a0"]
+[ext_resource type="Material" uid="uid://1tdpcpllor13" path="res://assets/Sprites/gold.tres" id="2_7wp55"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_8qie7"]
+material = ExtResource("2_7wp55")
+inner_radius = 0.25
+outer_radius = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7pxfa"]
+
+[node name="gold_speed" type="StaticBody3D"]
+script = ExtResource("1_p36a0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0036128, -0.999994, 0, 0.999994, -0.0036128, 0, 0, 0)
+mesh = SubResource("TorusMesh_8qie7")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("BoxShape3D_7pxfa")

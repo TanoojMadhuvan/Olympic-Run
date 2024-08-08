@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://wwnwix0jxoqy"]
+
+[ext_resource type="Texture2D" uid="uid://c51h0qmktjruk" path="res://assets/Imports/How_Background.jpg" id="1_q3qf8"]
+[ext_resource type="FontFile" uid="uid://b8fb0mgacngnf" path="res://assets/Imports/intuitive.ttf" id="2_ugvjl"]
+[ext_resource type="FontFile" uid="uid://ckwspe7kovr6e" path="res://assets/Imports/BlinkObl.otf" id="3_m7rou"]
+[ext_resource type="Script" path="res://scripts/How_Back_Button.gd" id="4_gtfne"]
+
+[node name="How_Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -45.0
+offset_right = 1201.0
+offset_bottom = 787.0
+texture = ExtResource("1_q3qf8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 19.0
+offset_right = 1148.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.466761, 0.199023, 0, 1)
+theme_override_fonts/font = ExtResource("2_ugvjl")
+theme_override_font_sizes/font_size = 150
+text = "How?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 105.0
+offset_right = 1150.0
+offset_bottom = 696.0
+theme_override_colors/font_color = Color(0.260581, 0.133114, 2.40654e-08, 1)
+theme_override_fonts/font = ExtResource("2_ugvjl")
+theme_override_font_sizes/font_size = 50
+text = "Use WASD or Arrow keys to move
+SPACE to jump
+Use mouse to turn/look
+Reach the next yellow checkpoint
+ENTER to go back to last checkpoint
+No pauses only ESCAPE to quit
+
+MOVE FAST 
+DON'T FALL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="How_Back_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 249.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_hover_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_fonts/font = ExtResource("3_m7rou")
+theme_override_font_sizes/font_size = 75
+text = "BACK"
+script = ExtResource("4_gtfne")
+
+[connection signal="pressed" from="How_Back_Button" to="How_Back_Button" method="_on_pressed"]

@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkc24occ57ks8"]
+
+[ext_resource type="Texture2D" uid="uid://dc5y8ct2p4vqd" path="res://assets/Imports/Background_Image.jpg" id="1_27up7"]
+[ext_resource type="FontFile" uid="uid://b8fb0mgacngnf" path="res://assets/Imports/intuitive.ttf" id="1_ucadl"]
+[ext_resource type="FontFile" uid="uid://k01b5y16rcw6" path="res://assets/Imports/BlinkUltraWide.otf" id="2_tljsl"]
+[ext_resource type="Script" path="res://scripts/Play_Button.gd" id="3_n72u2"]
+[ext_resource type="Script" path="res://scripts/How_Button.gd" id="5_f5buo"]
+[ext_resource type="Script" path="res://scripts/More_Button.gd" id="6_hy6yw"]
+[ext_resource type="Script" path="res://scripts/Setings_Button.gd" id="6_uxc8i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.028
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 1183.74
+offset_bottom = 666.0
+color = Color(0.203922, 1, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -72.0
+offset_right = 1214.0
+offset_bottom = 760.0
+texture = ExtResource("1_27up7")
+
+[node name="Label" type="Label" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = -167.0
+offset_top = 78.0
+offset_right = 985.0
+offset_bottom = 220.0
+rotation = -0.0851711
+scale = Vector2(1.285, 1.285)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.343246, 0, 0.122911, 1)
+theme_override_constants/shadow_offset_x = -5
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("1_ucadl")
+theme_override_font_sizes/font_size = 100
+text = "Olympic Run"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play_Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.199
+anchor_bottom = 0.193
+offset_left = 368.0
+offset_top = 259.0
+offset_right = 527.752
+offset_bottom = 279.936
+theme_override_colors/font_color = Color(0.434472, 0.495637, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.999811, 0, 0.0312985, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_tljsl")
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+script = ExtResource("3_n72u2")
+
+[node name="How_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 481.0
+offset_right = 745.0
+offset_bottom = 623.0
+theme_override_colors/font_color = Color(0, 0.441839, 0.229117, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_tljsl")
+theme_override_font_sizes/font_size = 100
+text = "HOW"
+script = ExtResource("5_f5buo")
+
+[node name="Setings_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 403.0
+offset_right = 343.0
+offset_bottom = 500.0
+theme_override_colors/font_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_tljsl")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS"
+script = ExtResource("6_uxc8i")
+
+[node name="More_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 342.0
+offset_right = 1143.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0.908136, 0.542923, 0.00866199, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_tljsl")
+theme_override_font_sizes/font_size = 70
+text = "MORE"
+script = ExtResource("6_hy6yw")
+
+[connection signal="pressed" from="Play_Button" to="Play_Button" method="_on_pressed"]
+[connection signal="pressed" from="How_Button" to="How_Button" method="_on_pressed"]
+[connection signal="pressed" from="Setings_Button" to="Setings_Button" method="_on_pressed"]
+[connection signal="pressed" from="More_Button" to="More_Button" method="_on_pressed"]

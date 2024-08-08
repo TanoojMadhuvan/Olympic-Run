@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://ei3w1xmtfsu"]
+
+[ext_resource type="Texture2D" uid="uid://ee3x3jic5mqh" path="res://assets/Imports/Greek_Textures/Ares_Texture.jpg" id="1_p4koa"]
+[ext_resource type="Script" path="res://scripts/ares.gd" id="1_wjjhq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yqn58"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qr2xn"]
+albedo_texture = ExtResource("1_p4koa")
+
+[sub_resource type="SphereMesh" id="SphereMesh_teu55"]
+material = SubResource("StandardMaterial3D_qr2xn")
+
+[node name="ares" type="CharacterBody3D"]
+script = ExtResource("1_wjjhq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_yqn58")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_teu55")

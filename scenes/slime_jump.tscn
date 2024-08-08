@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciybl6n3tt4ko"]
+
+[ext_resource type="Script" path="res://scripts/slime_jump.gd" id="1_hytri"]
+[ext_resource type="Texture2D" uid="uid://bfb1505il3icf" path="res://assets/Imports/Slime_Texture/Stylized_Scales_003_basecolor.png" id="1_l5lum"]
+[ext_resource type="Texture2D" uid="uid://ciskdyjdwj4w0" path="res://assets/Imports/Slime_Texture/Stylized_Scales_003_ambientOcclusion.png" id="2_w1ch7"]
+[ext_resource type="Texture2D" uid="uid://bldgbrqb7dn3s" path="res://assets/Imports/Slime_Texture/Stylized_Scales_003_height.png" id="3_xyn37"]
+[ext_resource type="Texture2D" uid="uid://b50i5a25jqpud" path="res://assets/Imports/Slime_Texture/Stylized_Scales_003_normal.png" id="4_doywu"]
+[ext_resource type="Texture2D" uid="uid://i0kvrtfh6dc3" path="res://assets/Imports/Slime_Texture/Stylized_Scales_003_roughness.png" id="5_dl7iq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jtl58"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7t1du"]
+albedo_texture = ExtResource("1_l5lum")
+roughness_texture = ExtResource("5_dl7iq")
+normal_enabled = true
+normal_texture = ExtResource("4_doywu")
+ao_enabled = true
+ao_texture = ExtResource("2_w1ch7")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_xyn37")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3junw"]
+material = SubResource("StandardMaterial3D_7t1du")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0jbaj"]
+
+[node name="slime_jump" type="StaticBody3D"]
+script = ExtResource("1_hytri")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("CylinderShape3D_jtl58")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("CylinderMesh_3junw")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(3, 0, 0, 0, 0.3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("CylinderShape3D_0jbaj")

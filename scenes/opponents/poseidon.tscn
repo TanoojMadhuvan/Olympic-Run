@@ -1,0 +1,32 @@
+[gd_scene load_steps=10 format=3 uid="uid://dp28u06rqbark"]
+
+[ext_resource type="Script" path="res://scripts/poseidon.gd" id="1_fdh4u"]
+[ext_resource type="Texture2D" uid="uid://bp5ii6lre2fs0" path="res://assets/Imports/Water_Texture/Water_002_COLOR.jpg" id="1_lx34p"]
+[ext_resource type="Texture2D" uid="uid://k48h3rdc8rw5" path="res://assets/Imports/Water_Texture/Water_002_OCC.jpg" id="2_mrm4m"]
+[ext_resource type="Texture2D" uid="uid://ch3potrevikby" path="res://assets/Imports/Water_Texture/Water_002_DISP.png" id="3_se4wx"]
+[ext_resource type="Texture2D" uid="uid://btvf21b2ynt21" path="res://assets/Imports/Water_Texture/Water_002_NORM.jpg" id="4_018oh"]
+[ext_resource type="Texture2D" uid="uid://bfgjldomvcvmm" path="res://assets/Imports/Water_Texture/Water_002_ROUGH.jpg" id="5_6s574"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nc2ke"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k11lg"]
+albedo_texture = ExtResource("1_lx34p")
+roughness_texture = ExtResource("5_6s574")
+normal_enabled = true
+normal_texture = ExtResource("4_018oh")
+ao_enabled = true
+ao_texture = ExtResource("2_mrm4m")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_se4wx")
+
+[sub_resource type="SphereMesh" id="SphereMesh_8mptl"]
+material = SubResource("StandardMaterial3D_k11lg")
+
+[node name="Poseidon" type="CharacterBody3D"]
+script = ExtResource("1_fdh4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_nc2ke")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_8mptl")

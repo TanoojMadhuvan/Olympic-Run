@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://syoqx4247env"]
+
+[ext_resource type="Script" path="res://scripts/lava_killzone.gd" id="1_1rt4s"]
+[ext_resource type="Material" uid="uid://crrm7rcv3vtdv" path="res://assets/Sprites/lava.tres" id="2_xkk8t"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_jmk7y"]
+material = ExtResource("2_xkk8t")
+inner_radius = 0.219
+outer_radius = 0.696
+
+[node name="lava_loop" type="StaticBody3D"]
+collision_layer = 8
+script = ExtResource("1_1rt4s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("TorusMesh_jmk7y")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+depth = 0.3
+polygon = PackedVector2Array(0.0661447, 0.294758, 0.1509, 0.279366, 0.248905, 0.218619, 0.298304, 0.170404, 0.335505, 0.088811, 0.359967, 0.0117059, 0.364331, -0.0999092, 0.318654, -0.19975, 0.269417, -0.266123, 0.169335, -0.327803, 0.0657129, -0.365728, -0.0542886, -0.357952, -0.134116, -0.3285, -0.194928, -0.285642, -0.239316, -0.229569, -0.280294, -0.147316, -0.302391, -0.0631213, -0.289431, 0.0539594, -0.242918, 0.161753, -0.17434, 0.225115, -0.114327, 0.26532, -0.0341702, 0.290155, -0.0571942, 0.781944, -0.261543, 0.73866, -0.459827, 0.63408, -0.632346, 0.454169, -0.771707, 0.179081, -0.783458, -0.0759946, -0.72597, -0.344197, -0.557013, -0.58124, -0.253016, -0.762637, 0.0579946, -0.814955, 0.415338, -0.724061, 0.658364, -0.498339, 0.781725, -0.263912, 0.819363, -0.0673965, 0.809324, 0.164112, 0.716013, 0.396371, 0.600701, 0.544092, 0.424392, 0.68275, 0.299665, 0.727736, 0.100508, 0.781093, 0.00925507, 0.785607)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

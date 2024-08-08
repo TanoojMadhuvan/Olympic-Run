@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cac08jn4pgtc4"]
+
+[ext_resource type="Script" path="res://scripts/aphrodite.gd" id="1_cgaof"]
+[ext_resource type="Texture2D" uid="uid://ci4epy5tvcgom" path="res://assets/Imports/Greek_Textures/Aphrodite_Texture.jpg" id="2_pe6of"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_um4um"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32tws"]
+albedo_texture = ExtResource("2_pe6of")
+
+[sub_resource type="SphereMesh" id="SphereMesh_058ft"]
+material = SubResource("StandardMaterial3D_32tws")
+
+[node name="aphrodite" type="CharacterBody3D"]
+script = ExtResource("1_cgaof")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_um4um")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_058ft")

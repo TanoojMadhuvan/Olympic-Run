@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsmkamt20lt7c"]
+
+[ext_resource type="Texture2D" uid="uid://dnxavf4xon6b" path="res://assets/Imports/More_Background.jpg" id="1_8g6ae"]
+[ext_resource type="FontFile" uid="uid://b8fb0mgacngnf" path="res://assets/Imports/intuitive.ttf" id="2_di8rd"]
+[ext_resource type="FontFile" uid="uid://ckwspe7kovr6e" path="res://assets/Imports/BlinkObl.otf" id="3_apyel"]
+[ext_resource type="Script" path="res://scripts/Back_More_Button.gd" id="4_lw8wy"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_00ke7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 1153.0
+offset_bottom = 976.0
+texture = ExtResource("1_8g6ae")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_00ke7")
+layout_mode = 0
+offset_left = -29.0
+offset_top = -34.0
+offset_right = 1180.0
+offset_bottom = 681.0
+color = Color(0.756863, 0.521569, 0.321569, 0.811765)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -42.0
+offset_right = 1151.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.901961, 0.784314, 0.027451, 1)
+theme_override_fonts/font = ExtResource("2_di8rd")
+theme_override_font_sizes/font_size = 100
+text = "MORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 146.0
+offset_right = 1157.0
+offset_bottom = 404.0
+theme_override_colors/font_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_fonts/font = ExtResource("2_di8rd")
+theme_override_font_sizes/font_size = 40
+text = "This game was created by Tanooj Kanike in honor of the 
+2024 Paris Olympics. As a true test of speed, strength, 
+and endurance, the Olympic Games were first conducted to 
+bring glory to the Greek gods.
+
+From Zeus's sky-high jumps to Athena's overintelligent maze-solving,
+this game pits you against the gods in a race for the eras.
+
+Can you outlast the speed of Hermes, and the power of Poseidon?
+Or will you fall like a regular mortal against the Olympians?"
+horizontal_alignment = 1
+
+[node name="Back_More_Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0.784314, 0.784314, 0.784314, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_hover_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_fonts/font = ExtResource("3_apyel")
+theme_override_font_sizes/font_size = 75
+text = "BACK
+"
+script = ExtResource("4_lw8wy")
+
+[connection signal="pressed" from="Back_More_Button" to="Back_More_Button" method="_on_pressed"]

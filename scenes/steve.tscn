@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://clr1sepw4bf30"]
+
+[ext_resource type="ArrayMesh" uid="uid://cnblcrtxc5w7e" path="res://assets/Sprites/Ball_Mesh.tres" id="1_aa5af"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kty3m"]
+radius = 0.506498
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_kty3m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_aa5af")
